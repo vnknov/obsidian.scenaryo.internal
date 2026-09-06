@@ -14,8 +14,8 @@ services:
       - PASSWORD=${OBSIDIAN_PASSWORD}
       - PIXELFLUX_WAYLAND=false
     volumes:
-      - ./vault:/config
-
+      - ${OBSIDIAN_VAULT_PATH}:/config
+    
     # Available only to other containers on the Docker network.
     # These ports are NOT published directly to the LAN.
     expose:
